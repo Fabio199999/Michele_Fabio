@@ -10,6 +10,7 @@ public abstract class Person {
         this.età = età;
         this.isReady = isReady;
     }
+    //
 
 
 
