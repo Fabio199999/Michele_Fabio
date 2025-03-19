@@ -1,37 +1,25 @@
-public class Tutor {
-    String nome;
-    String cognome;
-    int età ;
-    boolean isReady;
+public class Tutor extends Person{
+    int isReady;
 
-    public Tutor(String nome, String cognome, int età, boolean isReady) {
-        this.nome = nome;
-        this.cognome = cognome;
-        this.età = età;
-        this.isReady = isReady;
-    }
+    public Tutor(String nome, String cognome, int età, int isReady) {
+            super(nome, cognome, età, isReady);
+            this.isReady = isReady;
+        }
+    
 
     public void SomministrazioneDiAiuto() {
-        if (isReady  == false) {
+        if (isReady  == 0) {
             System.out.println("Ciao, sono "+nome+" "+cognome+" e non posso aiutarti al momento, ma ti rispondo tra un giorno, nel dubbio chiedi a Trotti!");
-        } else {
+        } else if (isReady == 1) {
             System.out.println("Ciao, sono "+nome+" "+cognome+" e sono pronto per aiutarti!");
         }
     }
 
-    public String getNome() {
-        return nome;
+    public int getTutor(){
+        return isReady;
     }
 
-    public String getCognome() {
-        return cognome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public void setCognome(String cognome) {
-        this.cognome = cognome;
+    public void setisReady( int isReady){
+        this.isReady = isReady;
     }
 }

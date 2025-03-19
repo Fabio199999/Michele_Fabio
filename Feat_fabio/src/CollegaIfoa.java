@@ -1,33 +1,25 @@
-public class CollegaIfoa extends Tutor {
-    boolean isTyredOfWorkingFor360ConsulenzaSrlrs;
+public class CollegaIfoa extends Person {
+    int isTyredOfWorkingFor360ConsulenzaSrlrs;
     
-    public CollegaIfoa(String nome, String cognome, int età, boolean isReady, boolean isTyredOfWorkingFor360ConsulenzaSrlrs) {
-        super(nome, cognome, età, isReady);
+    public CollegaIfoa(String nome, String cognome, int età, int isTyredOfWorkingFor360ConsulenzaSrlrs) {
+        super(nome, cognome, età, isTyredOfWorkingFor360ConsulenzaSrlrs);
         this.isTyredOfWorkingFor360ConsulenzaSrlrs = isTyredOfWorkingFor360ConsulenzaSrlrs;
     }
 
     public void saluta(){
-        if (isTyredOfWorkingFor360ConsulenzaSrlrs == true) {
+        if (isTyredOfWorkingFor360ConsulenzaSrlrs == 1) {
             System.out.println("Ciao, sono "+nome+" "+cognome+" e sono stanco di lavorare per 360ConsulenzaSrlrs");
-        } else {
+        } else if(isTyredOfWorkingFor360ConsulenzaSrlrs == 2)  {
             System.out.println("Ciao, sono "+nome+" "+cognome+" e sono pronto per lavorare per 360ConsulenzaSrlrs");
         }
     }
 
-    public String getNome(){
-        return this.nome;
+    public int getisTyredOfWorkingFor360ConsulenzaSrlrs(){
+        return isTyredOfWorkingFor360ConsulenzaSrlrs;
     }
 
-    public String getCognome(){
-        return this.cognome;
-    }
-
-    public void setNome(String nome){
-        this.nome = nome;
-    }
-
-    public void setCognome(String cognome){
-        this.cognome  = cognome;
+    public void setisTyredOfWorkingFor360ConsulenzaSrlrs( int isTyredOfWorkingFor360ConsulenzaSrlrs){
+        this.isTyredOfWorkingFor360ConsulenzaSrlrs = isTyredOfWorkingFor360ConsulenzaSrlrs;
     }
 
     @Override
